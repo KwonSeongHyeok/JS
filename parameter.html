@@ -7,32 +7,79 @@
     </head>
     <body>
        
-        <div class="alert-box" id="alert">알림창임
-        <button onclick="alertClose()">닫기</button>
+        <div class="alert-box" id="alert">
+         <p id="title">알림창임</p>
+        <button onclick="alertOpenClose('none')">닫기</button>
         </div>
-        <button onclick="alertOpen()">버튼</button>
+        <button onclick="아이디알림창()">버튼1</button>
+        <button onclick="비번알림창()">버튼2</button>
         
         <script>
 
-            function alertOpen(){
-                document.getElementById('alert').style.display = 'block';
+            function 아이디알림창(){
+                document.getElementById('title').innerHTML = '아이디입력하세요';
+                document.getElementById('alert').style.display = 'block';    
             }
             
-            function alertClose(){
-                document.getElementById('alert').style.display = 'none';
+            function 비번알림창(){
+                document.getElementById('title').innerHTML = '비번입력하세요';
+                document.getElementById('alert').style.display = 'block';    
             }
+            
+            
+            function alertOpenClose(구멍){
+                document.getElementById('alert').style.display = 구멍;    
+            }
+            
+            // 위처럼 파라미터 활용하면 아래처럼 2개의 코드를 사용할 필요 없음!!
+            // 파라미터를 사용하면 함수 1개로 다양한 코드 실행이 가능해짐
+            
+            //function alertOpen(){
+            //    document.getElementById('alert').style.display = 'block';
+            //}
+            //
+            //function alertClose(){
+            //    document.getElementById('alert').style.display = 'none';
+            //}
+            
+            
+            // 파라미터 예시 2
+            
+            function plus1(){
+                2 + 1
+            }
+            
+            function plus2(){
+                2 + 2
+            }
+            
+            function plus3(){
+                2 + 3
+            }
+            
+            // 위에 처럼 작성하면 코드가 길어짐 파라미터를 활용해서 하나의 함수로 축소->
+            function plus(구멍){
+                2 + 구멍
+            }
+            plus(1);
+        
             
         </script>
         
         <!--
-        * function
+        * function 파라미터 활용
         
+        - function에 구멍을 뚫어서 사용할 수 있음!!
+        - 파라미터 작명은 아무렇게나 가능
+        - 파라미터 여러개 가능 -> 여러개 사용할 때는 , 사용해서 하면 됨(구멍1, 구멍2) 이런식
+        
+        ex)
         function alertOpen(구멍){
             document.getElementById('alert').style.display = '구멍';
         }
             
-        alertOpen('안녕');
-        alertOpen('바보');
+        alertOpen('안녕'); -> 구멍 자리에 '안녕' 넣어서 alterOpen안의 코드 실행해주세요 라는 뜻
+        
         -->
         
     </body>
