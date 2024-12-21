@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+        <link rel="stylesheet" href="alterBox.css">
+    </head>
+    <body>
+       
+        <div class="alert-box" id="alert">알림창임
+        <button onclick="alertClose()">닫기</button>
+        </div>
+        <button onclick="alertOpen()">버튼</button>
+        
+        <script>
+
+            function alertOpen(){
+                document.getElementById('alert').style.display = 'block';
+            }
+            
+            function alertClose(){
+                document.getElementById('alert').style.display = 'none';
+            }
+            
+        </script>
+        
+        <!--
+        * function
+        
+        function alertOpen(구멍){
+            document.getElementById('alert').style.display = '구멍';
+        }
+            
+        alertOpen('안녕');
+        alertOpen('바보');
+        -->
+        
+    </body>
+</html>
