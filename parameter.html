@@ -8,7 +8,7 @@
     <body>
        
         <div class="alert-box" id="alert">
-         <p id="title">알림창임</p>
+         <p class="title1" id="title">알림창임</p>
         <button onclick="alertOpenClose('none')">닫기</button>
         </div>
         <button onclick="아이디알림창()">버튼1</button>
@@ -17,7 +17,10 @@
         <script>
 
             function 아이디알림창(){
-                document.getElementById('title').innerHTML = '아이디입력하세요';
+                // class 이름으로 찾기를 원한다면 getElementsByClassName 셀렉터를 사용
+                // 주의할 점!!! -> getElementsByClassName는 class가 들어있는 모든 html 요소를 찾아주기 때문에 반드시 인덱싱을 해주어야 함
+                // 한 개만 있더라도 [0]으로 인덱스 번호를 매겨줘야 작동함
+                document.getElementsByClassName('title1')[0].innerHTML = '아이디입력하세요';
                 document.getElementById('alert').style.display = 'block';    
             }
             
